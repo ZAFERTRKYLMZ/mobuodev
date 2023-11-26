@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="sayı bulmaca"
+        android:textColor="#003366"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutGiriş"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Zorluk Seçiniz"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonKolay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Kolay"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/radioButtonZor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Zor"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonOyungir"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#19B5CA"
+            android:text="Oyuna Gir" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOyun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewTahmindurum"
+                android:layout_width="111dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/start" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewKalanHak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kalan Hak: "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textViewDurum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Başladı"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumberTahmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="Tahmin ettiğiniz sayı"
+                    android:inputType="number"
+                    android:minHeight="38dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonTahminEt"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FE2C00"
+            android:text="Tahmin Et"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonTekrarOyna"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#53FF2C"
+            android:text="Tekrar Oyna"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewhile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
